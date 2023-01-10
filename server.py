@@ -76,7 +76,7 @@ def main():
     GET_REDIRECT = False if GET_REDIRECT_URL is None else True
     POST_REDIRECT = False if POST_REDIRECT_URL is None else True
 
-    print(f"Servering at port: {PORT}")
+    print(f"Servering at {IP} on port: {PORT}")
 
     handler = Handler(GET_REDIRECT, POST_REDIRECT, GET_REDIRECT_URL, POST_REDIRECT_URL)
     server = socketserver.TCPServer((IP, PORT), handler)
