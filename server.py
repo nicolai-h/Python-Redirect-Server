@@ -24,7 +24,7 @@ def Handler(GET_REDIRECT, POST_REDIRECT, GET_REDIRECT_URL, POST_REDIRECT_URL):
             self.end_headers()
 
         def GET_redirect(self):
-            self.send_response(301) # 301, moved permenantly
+            self.send_response(301) # 301, moved Permanently (todo add 303?)
             self.send_header("Location", GET_REDIRECT_URL) # add location header to indicate the new location
             self.end_headers()
         
